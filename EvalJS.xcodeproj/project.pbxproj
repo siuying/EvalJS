@@ -10,20 +10,21 @@
 		54181F1E16B034CC0076ACA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54181F1D16B034CC0076ACA1 /* UIKit.framework */; };
 		54181F2016B034CC0076ACA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54181F1F16B034CC0076ACA1 /* Foundation.framework */; };
 		54181F2216B034CC0076ACA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54181F2116B034CC0076ACA1 /* CoreGraphics.framework */; };
-		54181F2816B034CC0076ACA1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54181F2616B034CC0076ACA1 /* InfoPlist.strings */; };
-		54181F2A16B034CC0076ACA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54181F2916B034CC0076ACA1 /* main.m */; };
-		54181F2E16B034CC0076ACA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54181F2D16B034CC0076ACA1 /* AppDelegate.m */; };
-		54181F3016B034CC0076ACA1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 54181F2F16B034CC0076ACA1 /* Default.png */; };
-		54181F3216B034CC0076ACA1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54181F3116B034CC0076ACA1 /* Default@2x.png */; };
-		54181F3416B034CC0076ACA1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54181F3316B034CC0076ACA1 /* Default-568h@2x.png */; };
-		54181F4516B035160076ACA1 /* JavaScriptCoreRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 54181F4416B035160076ACA1 /* JavaScriptCoreRuntime.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		54181F4716B03F2F0076ACA1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 54181F4616B03F2F0076ACA1 /* Podfile */; };
 		54181F4F16B03F660076ACA1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54181F4E16B03F660076ACA1 /* SenTestingKit.framework */; };
 		54181F5016B03F660076ACA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54181F1D16B034CC0076ACA1 /* UIKit.framework */; };
 		54181F5116B03F660076ACA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54181F1F16B034CC0076ACA1 /* Foundation.framework */; };
 		54181F5716B03F660076ACA1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54181F5516B03F660076ACA1 /* InfoPlist.strings */; };
-		54181F6716B03FE00076ACA1 /* JavaScriptCoreRuntimeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 54181F6616B03FE00076ACA1 /* JavaScriptCoreRuntimeSpec.m */; };
-		54181F6916B0418B0076ACA1 /* JavaScriptCoreRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 54181F4416B035160076ACA1 /* JavaScriptCoreRuntime.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		54181F6716B03FE00076ACA1 /* EvalJSSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 54181F6616B03FE00076ACA1 /* EvalJSSpec.m */; };
+		54181F8F16B0462C0076ACA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54181F8316B0462C0076ACA1 /* AppDelegate.m */; };
+		54181F9016B0462C0076ACA1 /* EvalJS.m in Sources */ = {isa = PBXBuildFile; fileRef = 54181F8616B0462C0076ACA1 /* EvalJS.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		54181F9116B0462C0076ACA1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54181F8716B0462C0076ACA1 /* Default-568h@2x.png */; };
+		54181F9216B0462C0076ACA1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 54181F8816B0462C0076ACA1 /* Default.png */; };
+		54181F9316B0462C0076ACA1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54181F8916B0462C0076ACA1 /* Default@2x.png */; };
+		54181F9416B0462C0076ACA1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54181F8A16B0462C0076ACA1 /* InfoPlist.strings */; };
+		54181F9516B0462C0076ACA1 /* EvalJS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54181F8C16B0462C0076ACA1 /* EvalJS-Info.plist */; };
+		54181F9616B0462C0076ACA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54181F8E16B0462C0076ACA1 /* main.m */; };
+		54181F9816B0466C0076ACA1 /* EvalJS.m in Sources */ = {isa = PBXBuildFile; fileRef = 54181F8616B0462C0076ACA1 /* EvalJS.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		942916C73D4640FA8B664AE2 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D663BAD28E342008EE645E9 /* libPods-test.a */; };
 		B9A008C279A04133AE31C5A1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1317EEFF11C94156AD04E0CD /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -31,28 +32,28 @@
 /* Begin PBXFileReference section */
 		1317EEFF11C94156AD04E0CD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D663BAD28E342008EE645E9 /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		54181F1916B034CC0076ACA1 /* JavaScriptCoreRuntime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JavaScriptCoreRuntime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		54181F1916B034CC0076ACA1 /* EvalJS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvalJS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54181F1D16B034CC0076ACA1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		54181F1F16B034CC0076ACA1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		54181F2116B034CC0076ACA1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		54181F2516B034CC0076ACA1 /* JavaScriptCoreRuntime-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JavaScriptCoreRuntime-Info.plist"; sourceTree = "<group>"; };
-		54181F2716B034CC0076ACA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		54181F2916B034CC0076ACA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		54181F2B16B034CC0076ACA1 /* JavaScriptCoreRuntime-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JavaScriptCoreRuntime-Prefix.pch"; sourceTree = "<group>"; };
-		54181F2C16B034CC0076ACA1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		54181F2D16B034CC0076ACA1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		54181F2F16B034CC0076ACA1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		54181F3116B034CC0076ACA1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		54181F3316B034CC0076ACA1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		54181F4316B035160076ACA1 /* JavaScriptCoreRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaScriptCoreRuntime.h; sourceTree = "<group>"; };
-		54181F4416B035160076ACA1 /* JavaScriptCoreRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JavaScriptCoreRuntime.m; sourceTree = "<group>"; };
 		54181F4616B03F2F0076ACA1 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		54181F4D16B03F660076ACA1 /* Spec.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Spec.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54181F4E16B03F660076ACA1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		54181F5416B03F660076ACA1 /* Spec-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Spec-Info.plist"; sourceTree = "<group>"; };
 		54181F5616B03F660076ACA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		54181F5B16B03F660076ACA1 /* Spec-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spec-Prefix.pch"; sourceTree = "<group>"; };
-		54181F6616B03FE00076ACA1 /* JavaScriptCoreRuntimeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JavaScriptCoreRuntimeSpec.m; sourceTree = "<group>"; };
+		54181F6616B03FE00076ACA1 /* EvalJSSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvalJSSpec.m; sourceTree = "<group>"; };
+		54181F8216B0462C0076ACA1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		54181F8316B0462C0076ACA1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		54181F8516B0462C0076ACA1 /* EvalJS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvalJS.h; sourceTree = "<group>"; };
+		54181F8616B0462C0076ACA1 /* EvalJS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvalJS.m; sourceTree = "<group>"; };
+		54181F8716B0462C0076ACA1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		54181F8816B0462C0076ACA1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		54181F8916B0462C0076ACA1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		54181F8B16B0462C0076ACA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		54181F8C16B0462C0076ACA1 /* EvalJS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EvalJS-Info.plist"; sourceTree = "<group>"; };
+		54181F8D16B0462C0076ACA1 /* EvalJS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EvalJS-Prefix.pch"; sourceTree = "<group>"; };
+		54181F8E16B0462C0076ACA1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6B4EAE416BA94FB7B359B2AA /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "Pods/Pods-test.xcconfig"; sourceTree = SOURCE_ROOT; };
 		7AEBF58B5C6C4A9C88BB1B1F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -86,7 +87,7 @@
 		54181F0E16B034CC0076ACA1 = {
 			isa = PBXGroup;
 			children = (
-				54181F2316B034CC0076ACA1 /* JavaScriptCoreRuntime */,
+				54181F8116B0462C0076ACA1 /* EvalJS */,
 				54181F5216B03F660076ACA1 /* Spec */,
 				54181F1C16B034CC0076ACA1 /* Frameworks */,
 				54181F1A16B034CC0076ACA1 /* Products */,
@@ -99,7 +100,7 @@
 		54181F1A16B034CC0076ACA1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				54181F1916B034CC0076ACA1 /* JavaScriptCoreRuntime.app */,
+				54181F1916B034CC0076ACA1 /* EvalJS.app */,
 				54181F4D16B03F660076ACA1 /* Spec.octest */,
 			);
 			name = Products;
@@ -118,45 +119,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		54181F2316B034CC0076ACA1 /* JavaScriptCoreRuntime */ = {
-			isa = PBXGroup;
-			children = (
-				54181F4116B035090076ACA1 /* Classes */,
-				54181F2C16B034CC0076ACA1 /* AppDelegate.h */,
-				54181F2D16B034CC0076ACA1 /* AppDelegate.m */,
-				54181F2416B034CC0076ACA1 /* Supporting Files */,
-			);
-			path = JavaScriptCoreRuntime;
-			sourceTree = "<group>";
-		};
-		54181F2416B034CC0076ACA1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				54181F2516B034CC0076ACA1 /* JavaScriptCoreRuntime-Info.plist */,
-				54181F2616B034CC0076ACA1 /* InfoPlist.strings */,
-				54181F2916B034CC0076ACA1 /* main.m */,
-				54181F2B16B034CC0076ACA1 /* JavaScriptCoreRuntime-Prefix.pch */,
-				54181F2F16B034CC0076ACA1 /* Default.png */,
-				54181F3116B034CC0076ACA1 /* Default@2x.png */,
-				54181F3316B034CC0076ACA1 /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		54181F4116B035090076ACA1 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				54181F4316B035160076ACA1 /* JavaScriptCoreRuntime.h */,
-				54181F4416B035160076ACA1 /* JavaScriptCoreRuntime.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		54181F5216B03F660076ACA1 /* Spec */ = {
 			isa = PBXGroup;
 			children = (
 				54181F5316B03F660076ACA1 /* Supporting Files */,
-				54181F6616B03FE00076ACA1 /* JavaScriptCoreRuntimeSpec.m */,
+				54181F6616B03FE00076ACA1 /* EvalJSSpec.m */,
 			);
 			path = Spec;
 			sourceTree = "<group>";
@@ -171,12 +138,46 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		54181F8116B0462C0076ACA1 /* EvalJS */ = {
+			isa = PBXGroup;
+			children = (
+				54181F8216B0462C0076ACA1 /* AppDelegate.h */,
+				54181F8316B0462C0076ACA1 /* AppDelegate.m */,
+				54181F8416B0462C0076ACA1 /* Classes */,
+				54181F9716B0463F0076ACA1 /* Support */,
+			);
+			path = EvalJS;
+			sourceTree = "<group>";
+		};
+		54181F8416B0462C0076ACA1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				54181F8516B0462C0076ACA1 /* EvalJS.h */,
+				54181F8616B0462C0076ACA1 /* EvalJS.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		54181F9716B0463F0076ACA1 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				54181F8716B0462C0076ACA1 /* Default-568h@2x.png */,
+				54181F8816B0462C0076ACA1 /* Default.png */,
+				54181F8916B0462C0076ACA1 /* Default@2x.png */,
+				54181F8A16B0462C0076ACA1 /* InfoPlist.strings */,
+				54181F8C16B0462C0076ACA1 /* EvalJS-Info.plist */,
+				54181F8D16B0462C0076ACA1 /* EvalJS-Prefix.pch */,
+				54181F8E16B0462C0076ACA1 /* main.m */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		54181F1816B034CC0076ACA1 /* JavaScriptCoreRuntime */ = {
+		54181F1816B034CC0076ACA1 /* EvalJS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54181F3716B034CC0076ACA1 /* Build configuration list for PBXNativeTarget "JavaScriptCoreRuntime" */;
+			buildConfigurationList = 54181F3716B034CC0076ACA1 /* Build configuration list for PBXNativeTarget "EvalJS" */;
 			buildPhases = (
 				54181F1516B034CC0076ACA1 /* Sources */,
 				54181F1616B034CC0076ACA1 /* Frameworks */,
@@ -187,9 +188,9 @@
 			);
 			dependencies = (
 			);
-			name = JavaScriptCoreRuntime;
+			name = EvalJS;
 			productName = JavaScriptCoreRuntime;
-			productReference = 54181F1916B034CC0076ACA1 /* JavaScriptCoreRuntime.app */;
+			productReference = 54181F1916B034CC0076ACA1 /* EvalJS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		54181F4C16B03F660076ACA1 /* Spec */ = {
@@ -220,7 +221,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Ignition Soft";
 			};
-			buildConfigurationList = 54181F1316B034CC0076ACA1 /* Build configuration list for PBXProject "JavaScriptCoreRuntime" */;
+			buildConfigurationList = 54181F1316B034CC0076ACA1 /* Build configuration list for PBXProject "EvalJS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -232,7 +233,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				54181F1816B034CC0076ACA1 /* JavaScriptCoreRuntime */,
+				54181F1816B034CC0076ACA1 /* EvalJS */,
 				54181F4C16B03F660076ACA1 /* Spec */,
 			);
 		};
@@ -243,11 +244,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54181F2816B034CC0076ACA1 /* InfoPlist.strings in Resources */,
-				54181F3016B034CC0076ACA1 /* Default.png in Resources */,
-				54181F3216B034CC0076ACA1 /* Default@2x.png in Resources */,
-				54181F3416B034CC0076ACA1 /* Default-568h@2x.png in Resources */,
 				54181F4716B03F2F0076ACA1 /* Podfile in Resources */,
+				54181F9116B0462C0076ACA1 /* Default-568h@2x.png in Resources */,
+				54181F9216B0462C0076ACA1 /* Default.png in Resources */,
+				54181F9316B0462C0076ACA1 /* Default@2x.png in Resources */,
+				54181F9416B0462C0076ACA1 /* InfoPlist.strings in Resources */,
+				54181F9516B0462C0076ACA1 /* EvalJS-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,9 +312,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54181F2A16B034CC0076ACA1 /* main.m in Sources */,
-				54181F2E16B034CC0076ACA1 /* AppDelegate.m in Sources */,
-				54181F4516B035160076ACA1 /* JavaScriptCoreRuntime.m in Sources */,
+				54181F8F16B0462C0076ACA1 /* AppDelegate.m in Sources */,
+				54181F9016B0462C0076ACA1 /* EvalJS.m in Sources */,
+				54181F9616B0462C0076ACA1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,26 +322,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54181F6716B03FE00076ACA1 /* JavaScriptCoreRuntimeSpec.m in Sources */,
-				54181F6916B0418B0076ACA1 /* JavaScriptCoreRuntime.m in Sources */,
+				54181F6716B03FE00076ACA1 /* EvalJSSpec.m in Sources */,
+				54181F9816B0466C0076ACA1 /* EvalJS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		54181F2616B034CC0076ACA1 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				54181F2716B034CC0076ACA1 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		54181F5516B03F660076ACA1 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				54181F5616B03F660076ACA1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		54181F8A16B0462C0076ACA1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54181F8B16B0462C0076ACA1 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -403,9 +405,9 @@
 			baseConfigurationReference = 7AEBF58B5C6C4A9C88BB1B1F /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JavaScriptCoreRuntime/JavaScriptCoreRuntime-Prefix.pch";
-				INFOPLIST_FILE = "JavaScriptCoreRuntime/JavaScriptCoreRuntime-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "EvalJS/EvalJS-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/EvalJS/EvalJS-Info.plist";
+				PRODUCT_NAME = EvalJS;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -415,9 +417,9 @@
 			baseConfigurationReference = 7AEBF58B5C6C4A9C88BB1B1F /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JavaScriptCoreRuntime/JavaScriptCoreRuntime-Prefix.pch";
-				INFOPLIST_FILE = "JavaScriptCoreRuntime/JavaScriptCoreRuntime-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "EvalJS/EvalJS-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/EvalJS/EvalJS-Info.plist";
+				PRODUCT_NAME = EvalJS;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -457,7 +459,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		54181F1316B034CC0076ACA1 /* Build configuration list for PBXProject "JavaScriptCoreRuntime" */ = {
+		54181F1316B034CC0076ACA1 /* Build configuration list for PBXProject "EvalJS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54181F3516B034CC0076ACA1 /* Debug */,
@@ -466,7 +468,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54181F3716B034CC0076ACA1 /* Build configuration list for PBXNativeTarget "JavaScriptCoreRuntime" */ = {
+		54181F3716B034CC0076ACA1 /* Build configuration list for PBXNativeTarget "EvalJS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54181F3816B034CC0076ACA1 /* Debug */,

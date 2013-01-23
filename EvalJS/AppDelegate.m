@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "JavaScriptCoreRuntime.h"
+#import "EvalJS.h"
 
 @implementation AppDelegate
 
@@ -17,12 +17,12 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    JavaScriptCoreRuntime* js = [[JavaScriptCoreRuntime alloc] init];
+    EvalJS* js = [[EvalJS alloc] init];
     [js eval:@"function test(a, b) {return a + b; }"];
-    id result = [js eval:@"test(3, 2)"];
+    [js eval:@"test(3, 2)"];
 
-    result = [js eval:@"a = {a: 1, b: 2}"];
-    NSLog(@"dict: %@", result);
+    id result = [js eval:@"a = {a: 1, b: 2}"];
+    NSLog(@"result: %@", result);
 
     return YES;
 }

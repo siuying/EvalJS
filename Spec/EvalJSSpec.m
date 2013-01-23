@@ -6,15 +6,15 @@
 //  Copyright (c) 2013年 Ignition Soft. All rights reserved.
 //
 
-#import "JavaScriptCoreRuntime.h"
+#import "EvalJS.h"
 
 SpecBegin(JavaScriptCoreRuntime)
 
 describe(@"-eval:", ^{
-    __block JavaScriptCoreRuntime* runtime;
+    __block EvalJS* runtime;
     
     beforeEach(^{
-        runtime = [[JavaScriptCoreRuntime alloc] init];
+        runtime = [[EvalJS alloc] init];
     });
     
     it(@"should eval values", ^{

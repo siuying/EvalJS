@@ -4,7 +4,7 @@ pod 'Ejecta'
 
 
 target :test do
-    link_with 'Spec'
+    link_with 'EvalJS_Spec'
     pod 'Specta'
     pod 'Expecta'
 end

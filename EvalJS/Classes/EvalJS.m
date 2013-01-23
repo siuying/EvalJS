@@ -6,8 +6,8 @@
 //  Copyright (c) 2013年 Ignition Soft. All rights reserved.
 //
 
-#import "JavaScriptCoreRuntime.h"
-
+#import "EvalJS.h"
+#import "EJConvert.h"
 
 NSString * JSValueToJSONObject( JSContextRef ctx, JSValueRef val ) {
     if (!val) return nil;
@@ -21,7 +21,7 @@ NSString * JSValueToJSONObject( JSContextRef ctx, JSValueRef val ) {
     return result;
 }
 
-@implementation JavaScriptCoreRuntime
+@implementation EvalJS
 
 - (id)init {
 	if( self = [super init] ) {
@@ -29,7 +29,6 @@ NSString * JSValueToJSONObject( JSContextRef ctx, JSValueRef val ) {
 	}
 	return self;
 }
-
 
 - (void)dealloc {
 	JSGlobalContextRelease(context);

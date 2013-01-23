@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "JavaScriptCore/JavaScriptCore.h"
-#import "EJConvert.h"
 
-@interface JavaScriptCoreRuntime : NSObject {
+@interface EvalJS : NSObject {
     JSGlobalContextRef context;
 }
 
