@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'Spec' target in the 'Spec' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+    #import "Specta.h"
+    #define EXP_SHORTHAND
+    #import "Expecta.h"
+#endif

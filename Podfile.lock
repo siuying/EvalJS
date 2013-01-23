@@ -1,0 +1,20 @@
+
+PODS:
+- Ejecta (1.2):
+  - Ejecta/Library (= 1.2)
+- Ejecta/Library (1.2)
+- Expecta (0.2.0)
+- Specta (0.1.7)
+
+DEPENDENCIES:
+- Ejecta
+- Expecta
+- Specta
+
+SPEC CHECKSUMS:
+  Ejecta: a6665e9e7b22df42f22d64b28b33172ce877113e
+  Ejecta/Library: a6665e9e7b22df42f22d64b28b33172ce877113e
+  Expecta: 1521da8c54c253277d5fae673f516c76ed838bc7
+  Specta: 4e6b096987bf7435e2c05c60d9387316f5735ec0
+
+COCOAPODS: 0.16.0

@@ -7,15 +7,23 @@
 //
 
 #import "AppDelegate.h"
+#import "JavaScriptCoreRuntime.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    JavaScriptCoreRuntime* js = [[JavaScriptCoreRuntime alloc] init];
+    [js eval:@"function test(a, b) {return a + b; }"];
+    id result = [js eval:@"test(3, 2)"];
+
+    result = [js eval:@"a = {a: 1, b: 2}"];
+    NSLog(@"dict: %@", result);
+
     return YES;
 }
 

@@ -1,0 +1,9 @@
+ALWAYS_SEARCH_USER_PATHS = YES
+OTHER_LDFLAGS = -ObjC -lJavaScriptCore -licucore -lstdc++ -framework AVFoundation -framework AudioToolbox -framework CoreGraphics -framework CoreText -framework Foundation -framework GameKit -framework OpenAL -framework OpenGLES -framework QuartzCore -framework SenTestingKit -framework SystemConfiguration -framework iAd
+HEADER_SEARCH_PATHS = ${PODS_HEADERS_SEARCH_PATHS}
+PODS_ROOT = ${SRCROOT}/Pods
+PODS_BUILD_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/Ejecta" "${PODS_ROOT}/BuildHeaders/Ejecta/EJAudio" "${PODS_ROOT}/BuildHeaders/Ejecta/EJCanvas" "${PODS_ROOT}/BuildHeaders/Ejecta/EJUtils" "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/Ejecta/JavaScriptCore" "${PODS_ROOT}/BuildHeaders/Ejecta/lodepng" "${PODS_ROOT}/BuildHeaders/Expecta" "${PODS_ROOT}/BuildHeaders/Specta"
+PODS_PUBLIC_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/Ejecta" "${PODS_ROOT}/Headers/Ejecta/EJAudio" "${PODS_ROOT}/Headers/Ejecta/EJCanvas" "${PODS_ROOT}/Headers/Ejecta/EJUtils" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/Ejecta/JavaScriptCore" "${PODS_ROOT}/Headers/Ejecta/lodepng" "${PODS_ROOT}/Headers/Expecta" "${PODS_ROOT}/Headers/Specta"
+PODS_HEADERS_SEARCH_PATHS = ${PODS_PUBLIC_HEADERS_SEARCH_PATHS}
+LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/Ejecta"
+FRAMEWORK_SEARCH_PATHS = "$(SDKROOT)/Developer/Library/Frameworks" "$(DEVELOPER_LIBRARY_DIR)/Frameworks"
