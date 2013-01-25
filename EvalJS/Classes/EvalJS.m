@@ -25,15 +25,51 @@ NSString * JSValueToJSONObject( JSContextRef ctx, JSValueRef val ) {
 
 @implementation EvalJS
 
+void * refToSelf;
+
+JSValueRef EvalJSBlockCallBack(JSContextRef ctx,
+                               JSObjectRef function,
+                               JSObjectRef thisObject,
+                               size_t argumentCount,
+                               const JSValueRef arguments[],
+                               JSValueRef* exception)
+{
+    JSStringRef jsNamePropertyName = JSStringCreateWithUTF8CString("name");
+	JSValueRef jsName = JSObjectGetProperty( ctx, function, jsNamePropertyName, NULL );
+    NSString* name = JSValueToNSString(ctx, jsName);
+
+    EvalJSBlock callback = [[(EvalJS*)refToSelf callbackBlocks] objectForKey:name];
+    if (callback) {
+        NSMutableArray* objcArgs = [NSMutableArray array];
+        for (int i=0; i < argumentCount; i++) {
+            [objcArgs addObject:JSValueToJSONObject(ctx, arguments[i])];
+        }
+        callback((NSUInteger) argumentCount, objcArgs);
+    }
+    return JSValueMakeNull(ctx);
+}
+
 - (id)init {
 	if( self = [super init] ) {
 		context = JSGlobalContextCreate(NULL);
+        refToSelf = self;
+        callbackBlocks = [[NSMutableDictionary alloc] init];
 	}
 	return self;
 }
 
+-(NSDictionary*) callbackBlocks {
+    return callbackBlocks;
+}
+
 - (void)dealloc {
+    refToSelf = nil;
 	JSGlobalContextRelease(context);
+    
+    [callbackBlocks removeAllObjects];
+    [callbackBlocks release];
+    callbackBlocks = nil;
+
 	[super dealloc];
 }
 
@@ -51,6 +87,23 @@ NSString * JSValueToJSONObject( JSContextRef ctx, JSValueRef val ) {
         [self convertException:exception withContext:context toError:error];
     }
     return JSValueToJSONObject(context, val);
+}
+
+-(BOOL) createFunction:(NSString*)functionName callback:(EvalJSBlock)callback {
+    return [self createFunction:functionName callback:callback error:nil];
+}
+
+-(BOOL) createFunction:(NSString*)functionName callback:(EvalJSBlock)callback error:(NSError**) error{
+    [callbackBlocks setObject:callback forKey:functionName];
+	JSValueRef exception = NULL;
+    JSStringRef functionNameJs = JSStringCreateWithCFString((CFStringRef)functionName);
+    JSObjectRef func = JSObjectMakeFunctionWithCallback(context, functionNameJs, EvalJSBlockCallBack);
+    JSObjectSetProperty(context, JSContextGetGlobalObject(context), functionNameJs, func, kJSPropertyAttributeNone, &exception);
+    if (exception) {
+        [self convertException:exception withContext:context toError:error];
+    }
+    JSStringRelease(functionNameJs);
+    return exception == NULL;
 }
 
 #pragma mark - Private

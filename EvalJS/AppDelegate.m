@@ -23,7 +23,16 @@
 
     id result = [js eval:@"a = {a: 1, b: 2}"];
     NSLog(@"result: %@", result);
-
+    
+    [js createFunction:@"hello" callback:^id(NSUInteger argc, NSArray *argv) {
+        NSLog(@"world: %@", argv);
+        return nil;
+    }];
+    
+    for (int i=0; i<1000; i++) {
+        [js eval:@"hello('world');"];
+    }
+    
     return YES;
 }
 

@@ -11,14 +11,29 @@
 
 extern NSString *const EvalJSErrorDomain;
 
+typedef id (^EvalJSBlock)(NSUInteger argc, NSArray* argv);
+
 @interface EvalJS : NSObject {
     JSGlobalContextRef context;
+    NSMutableDictionary* callbackBlocks;
 }
+
+@property (readonly, nonatomic) NSMutableDictionary* callbackBlocks;
 
 // eval javascript, if there are errors eval the script, set error to the error
 -(id)eval:(NSString *)script error:(NSError**)error;
 
 // eval javascript, ignore any error returned
 -(id)eval:(NSString *)script;
+
+// create a javascript function that run the supplied Objective-C Block.
+// Return true when function created successfully.
+// Return false when exception occurred while creating the function, error object will set to the error.
+-(BOOL) createFunction:(NSString*)functionName callback:(EvalJSBlock)callback error:(NSError**) error;
+
+// create a javascript function that run the supplied Objective-C Block.
+// Return true when function created successfully.
+// Return false when exception occurred while creating the function.
+-(BOOL) createFunction:(NSString*)functionName callback:(EvalJSBlock)callback;
 
 @end
