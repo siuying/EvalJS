@@ -20,10 +20,12 @@ typedef id (^EvalJSBlock)(NSUInteger argc, NSArray* argv);
 
 @property (readonly, nonatomic) NSMutableDictionary* callbackBlocks;
 
-// eval javascript, if there are errors eval the script, set error to the error
+// eval javascript, return the result object when success.
+// if there are exception when eval the script, return nil and set error to the error
 -(id)eval:(NSString *)script error:(NSError**)error;
 
-// eval javascript, ignore any error returned
+// eval javascript, return the result object when success.
+// if there are exception when eval the script, return nil.
 -(id)eval:(NSString *)script;
 
 // create a javascript function that run the supplied Objective-C Block.
