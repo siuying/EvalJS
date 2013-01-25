@@ -25,12 +25,12 @@
     NSLog(@"result: %@", result);
     
     [js createFunction:@"hello" callback:^id(NSUInteger argc, NSArray *argv) {
-        NSLog(@"world: %@", argv);
+        NSLog(@"world: %@", [argv objectAtIndex:0]);
         return nil;
     }];
     
-    for (int i=0; i<1000; i++) {
-        [js eval:@"hello('world');"];
+    for (int i=0; i<10; i++) {
+        [js eval:[NSString stringWithFormat:@"hello('%d');", i]];
     }
     
     return YES;
