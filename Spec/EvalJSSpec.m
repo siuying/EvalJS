@@ -16,7 +16,11 @@ describe(@"-eval:", ^{
     beforeEach(^{
         runtime = [[EvalJS alloc] init];
     });
-    
+
+    afterEach(^{
+        runtime = nil;
+    });
+
     it(@"should eval values", ^{
         expect([runtime eval:@"1"]).to.equal(1);
         expect([runtime eval:@"\"Hello\""]).to.equal(@"Hello");
@@ -51,6 +55,7 @@ describe(@"createFunction:callback:", ^{
     beforeEach(^{
         runtime = [[EvalJS alloc] init];
     });
+
     afterEach(^{
         runtime = nil;
     });
@@ -59,6 +64,7 @@ describe(@"createFunction:callback:", ^{
         __block NSInteger testVal = 0;
         BOOL created = [runtime createFunction:@"hello" callback:^id(NSUInteger argc, NSArray *argv) {
             testVal = 1;
+            expect(argc).to.equal(0);
             return nil;
         }];
         expect(created).to.beTruthy();
@@ -71,6 +77,7 @@ describe(@"createFunction:callback:", ^{
         __block NSInteger testVal = 0;
         BOOL created = [runtime createFunction:@"hello" callback:^id(NSUInteger argc, NSArray *argv) {
             testVal = [[argv objectAtIndex:0] integerValue];
+            expect(argc).to.equal(1);
             return nil;
         }];
         expect(created).to.beTruthy();
