@@ -3,6 +3,10 @@
 EvalJS lets you run JavaScript code from your iOS app. It is based on [JavaScriptCore](http://trac.webkit.org/wiki/JavaScriptCore) and [Ejecta](https://github.com/phoboslab/Ejecta), but does not contain any DOM or 
 Canvas/Audio objects.
 
+## Status
+
+Experimental. This has not been used in production yet and should be considered as a proof of concept.
+
 ## Usage
 
 ### Evaulate Javascript
