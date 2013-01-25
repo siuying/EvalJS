@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/siuying/EvalJS'
   s.author   = { 'Francis Chong' => 'francis@ignition.hk' }
   s.license  = 'MIT License'
-  s.source   = { :git => 'https://github.com/siuying/EvalJS.git', :tag => '0.0.1' }
+  s.source   = { :git => 'https://github.com/siuying/EvalJS.git', :tag => '0.0.2' }
 
   s.platform = :ios
   s.dependency 'Ejecta', '1.2'
