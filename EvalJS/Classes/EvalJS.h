@@ -9,10 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "JavaScriptCore/JavaScriptCore.h"
 
+extern NSString *const EvalJSErrorDomain;
+
 @interface EvalJS : NSObject {
     JSGlobalContextRef context;
 }
 
-- (id)eval:(NSString *)script;
+// eval javascript, if there are errors eval the script, set error to the error
+-(id)eval:(NSString *)script error:(NSError**)error;
+
+// eval javascript, ignore any error returned
+-(id)eval:(NSString *)script;
 
 @end

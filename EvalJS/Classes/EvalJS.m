@@ -9,6 +9,8 @@
 #import "EvalJS.h"
 #import "EJConvert.h"
 
+NSString *const EvalJSErrorDomain = @"EvalJS.ErrorDomain";
+
 NSString * JSValueToJSONObject( JSContextRef ctx, JSValueRef val ) {
     if (!val) return nil;
 
@@ -35,32 +37,49 @@ NSString * JSValueToJSONObject( JSContextRef ctx, JSValueRef val ) {
 	[super dealloc];
 }
 
-- (id)eval:(NSString *)script {
+-(id)eval:(NSString *)script {
+    return [self eval:script error:nil];
+}
+
+- (id)eval:(NSString *)script error:(NSError**)error {
 	JSStringRef scriptJS = JSStringCreateWithCFString((CFStringRef)script);
 	JSValueRef exception = NULL;
 	JSValueRef val = JSEvaluateScript(context, scriptJS, NULL, NULL, 0, &exception);
-	[self logException:exception ctx:context];
     JSStringRelease(scriptJS);
-    return JSValueToJSONObject(context, val);    
+
+    if (exception) {
+        [self convertException:exception withContext:context toError:error];
+    }
+    return JSValueToJSONObject(context, val);
 }
 
-- (void)logException:(JSValueRef)exception ctx:(JSContextRef)ctxp {
-	if( !exception ) return;
+#pragma mark - Private
 
+- (void)convertException:(JSValueRef)exception withContext:(JSContextRef)ctxp toError:(NSError**)error{
 	JSStringRef jsLinePropertyName = JSStringCreateWithUTF8CString("line");
 	JSStringRef jsFilePropertyName = JSStringCreateWithUTF8CString("sourceURL");
 	
 	JSObjectRef exObject = JSValueToObject( ctxp, exception, NULL );
 	JSValueRef line = JSObjectGetProperty( ctxp, exObject, jsLinePropertyName, NULL );
 	JSValueRef file = JSObjectGetProperty( ctxp, exObject, jsFilePropertyName, NULL );
-	
-	NSLog(
-      @"[js][exception] %@ at line %@ in %@",
-      JSValueToNSString( ctxp, exception ),
-      JSValueToNSString( ctxp, line ),
-      JSValueToNSString( ctxp, file )
-    );
-	
+
+    if (error != nil) {
+        NSDictionary* userInfo = @{
+            @"exception": JSValueToNSString( ctxp, exception ),
+            @"line": JSValueToNSString( ctxp, line ),
+            @"file": JSValueToNSString( ctxp, file )
+        };
+        
+        *error = [NSError errorWithDomain:EvalJSErrorDomain
+                                     code:1
+                                 userInfo:userInfo];
+    } else {
+        NSLog(@"[js] %@ in %@ of %@",
+            JSValueToNSString(ctxp, exception),
+            JSValueToNSString(ctxp, line),
+            JSValueToNSString( ctxp, file ));
+    }
+
 	JSStringRelease( jsLinePropertyName );
 	JSStringRelease( jsFilePropertyName );
 }
