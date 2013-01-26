@@ -44,7 +44,22 @@ JSValueRef EvalJSBlockCallBack(JSContextRef ctx,
         for (int i=0; i < argumentCount; i++) {
             [objcArgs addObject:JSValueToJSONObject(ctx, arguments[i])];
         }
-        callback((NSUInteger) argumentCount, objcArgs);
+
+        id<NSObject> result = callback((NSUInteger) argumentCount, objcArgs);
+        if ([result isKindOfClass:[NSNumber class]]) {
+            NSNumber* numberVal = (NSNumber*) result;
+            return JSValueMakeNumber(ctx, [numberVal doubleValue]);
+
+        } else if ([result isKindOfClass:[NSString class]]) {
+            NSString* stringVal = (NSString*) result;
+            JSStringRef jsStringVal = JSStringCreateWithCFString((CFStringRef)stringVal);
+            JSValueRef result = JSValueMakeString(ctx, jsStringVal);
+            JSStringRelease(jsStringVal);
+            return result;
+
+        } else if ([result isKindOfClass:[NSNull class]] || result == nil) {
+            return JSValueMakeNull(ctx);
+        }
     }
     return JSValueMakeNull(ctx);
 }

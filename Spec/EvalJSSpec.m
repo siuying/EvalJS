@@ -85,6 +85,33 @@ describe(@"createFunction:callback:", ^{
         [runtime eval:@"hello(100);"];
         expect(testVal).to.equal(100);
     });
+
+    it(@"should return value from objective-c to javascript", ^{
+        [runtime createFunction:@"hello" callback:^id(NSUInteger argc, NSArray *argv) {
+            return @35;
+        }];
+        expect(([runtime eval:@"hello();"])).to.equal((@35));
+        
+        [runtime createFunction:@"world" callback:^id(NSUInteger argc, NSArray *argv) {
+            return @"test";
+        }];
+        expect(([runtime eval:@"world();"])).to.equal((@"test"));
+
+        [runtime createFunction:@"foo" callback:^id(NSUInteger argc, NSArray *argv) {
+            return [NSNumber numberWithDouble:1.5];
+        }];
+        expect(([[runtime eval:@"foo();"] doubleValue] - 1.5)).to.beLessThanOrEqualTo(0.0001);
+        
+        [runtime createFunction:@"bar" callback:^id(NSUInteger argc, NSArray *argv) {
+            return [NSNumber numberWithBool:YES];
+        }];
+        expect([runtime eval:@"bar();"]).to.beTruthy();
+        
+        [runtime createFunction:@"bar2" callback:^id(NSUInteger argc, NSArray *argv) {
+            return [NSNumber numberWithBool:NO];
+        }];
+        expect([runtime eval:@"bar2();"]).to.beFalsy();
+    });
 });
 
 SpecEnd

@@ -12,23 +12,23 @@ Experimental. This has not been used in production yet and should be considered 
 ### Evaulate Javascript
 
 ```objective-c
-    EvalJS* js = [[EvalJS alloc] init];
-    [js eval:@"function test(a, b) {return a + b; }"];
+EvalJS* js = [[EvalJS alloc] init];
+[js eval:@"function test(a, b) {return a + b; }"];
 
-    id result = [js eval:@"test(3, 2)"];
-    NSLog(@"result: %@", result);
+id result = [js eval:@"test(3, 2)"];
+NSLog(@"result: %@", result);
 ```
 
 ### Create Javascript function that invoke Objective-C block
 
 ```objective-c
-    EvalJS* js = [[EvalJS alloc] init];
-    [js createFunction:@"hello" callback:^id(NSUInteger argc, NSArray *argv) {
-        NSLog(@"hello: %@", [argv objectAtIndex:0]);
-        return nil;
-    }];
+EvalJS* js = [[EvalJS alloc] init];
+[js createFunction:@"hello" callback:^id(NSUInteger argc, NSArray *argv) {
+    NSLog(@"hello: %@", [argv objectAtIndex:0]);
+    return @"world";
+}];
 
-    id result = [js eval:@"hello(3)"];
+NSString* result = [js eval:@"hello(3)"];
 ```
 
 The output would be: 
