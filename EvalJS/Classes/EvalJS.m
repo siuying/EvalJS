@@ -110,14 +110,13 @@ JSValueRef EvalJSBlockCallBack(JSContextRef ctx,
 
 -(id) loadScript:(NSString *)filename error:(NSError**) error {
     NSBundle* bundle = [NSBundle bundleForClass:[self class]];
-    NSLog(@"bundle resource path: %@", [bundle resourcePath]);
 
     NSString* fullPath = [bundle pathForResource:filename ofType:@"js"];
     NSString* script = [NSString stringWithContentsOfFile:fullPath
                                                  encoding:NSUTF8StringEncoding
                                                     error:error];
     if(!script) {
-        NSLog(@"script not loaded, full path: %@", fullPath);
+        NSLog(@"[EvalJS] script not loaded, full path: %@", fullPath);
         return nil;
     }
     
@@ -163,7 +162,7 @@ JSValueRef EvalJSBlockCallBack(JSContextRef ctx,
                                      code:1
                                  userInfo:userInfo];
     } else {
-        NSLog(@"[js] %@ in %@ of %@",
+        NSLog(@"[EvalJS] %@ in %@ of %@",
             JSValueToNSString(ctxp, exception),
             JSValueToNSString(ctxp, line),
             JSValueToNSString( ctxp, file ));
