@@ -18,20 +18,20 @@
     [self.window makeKeyAndVisible];
     
     EvalJS* js = [[EvalJS alloc] init];
+    [js loadScript:@"default"];
+    
     [js eval:@"function test(a, b) {return a + b; }"];
     [js eval:@"test(3, 2)"];
 
     id result = [js eval:@"a = {a: 1, b: 2}"];
     NSLog(@"result: %@", result);
     
-    [js createFunction:@"hello" callback:^id(NSUInteger argc, NSArray *argv) {
-        NSLog(@"world: %@", [argv objectAtIndex:0]);
+    [js createFunction:@"NSLog" callback:^id(NSUInteger argc, NSArray *argv) {
+        NSLog(@"%@", [argv objectAtIndex:0]);
         return nil;
     }];
     
-    for (int i=0; i<10; i++) {
-        [js eval:[NSString stringWithFormat:@"hello('%d');", i]];
-    }
+    [js eval:@"console.log('Hello World', 1)"];
     
     return YES;
 }

@@ -22,11 +22,22 @@ typedef id (^EvalJSBlock)(NSUInteger argc, NSArray* argv);
 
 // eval javascript, return the result object when success.
 // if there are exception when eval the script, return nil and set error to the error
--(id)eval:(NSString *)script error:(NSError**)error;
+-(id) eval:(NSString *)script error:(NSError**)error;
 
 // eval javascript, return the result object when success.
 // if there are exception when eval the script, return nil.
--(id)eval:(NSString *)script;
+-(id) eval:(NSString *)script;
+
+// Load script file from resource path.
+// @param filename Javascript filename in resources path, without the js extension.
+// @return if there are exception when eval the script.
+-(id) loadScript:(NSString *)filename;
+
+// Load script file from resource path.
+// @param filename Javascript filename in resources path, without the js extension.
+// @error pointer to error object
+// @return if there are exception when eval the script, return nil and set error to the error.
+-(id) loadScript:(NSString *)filename error:(NSError**) error;
 
 // create a javascript function that run the supplied Objective-C Block.
 // Return true when function created successfully.

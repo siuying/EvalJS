@@ -25,6 +25,8 @@
 		54181F9516B0462C0076ACA1 /* EvalJS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54181F8C16B0462C0076ACA1 /* EvalJS-Info.plist */; };
 		54181F9616B0462C0076ACA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54181F8E16B0462C0076ACA1 /* main.m */; };
 		54181F9816B0466C0076ACA1 /* EvalJS.m in Sources */ = {isa = PBXBuildFile; fileRef = 54181F8616B0462C0076ACA1 /* EvalJS.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		546289C116B6BFD3000A174E /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 546289BE16B6BE08000A174E /* test.js */; };
+		546289C316B6C025000A174E /* default.js in Resources */ = {isa = PBXBuildFile; fileRef = 546289C216B6C025000A174E /* default.js */; };
 		942916C73D4640FA8B664AE2 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D663BAD28E342008EE645E9 /* libPods-test.a */; };
 		B9A008C279A04133AE31C5A1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1317EEFF11C94156AD04E0CD /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		54181F8C16B0462C0076ACA1 /* EvalJS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EvalJS-Info.plist"; sourceTree = "<group>"; };
 		54181F8D16B0462C0076ACA1 /* EvalJS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EvalJS-Prefix.pch"; sourceTree = "<group>"; };
 		54181F8E16B0462C0076ACA1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		546289BE16B6BE08000A174E /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
+		546289C216B6C025000A174E /* default.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = default.js; sourceTree = "<group>"; };
 		6B4EAE416BA94FB7B359B2AA /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "Pods/Pods-test.xcconfig"; sourceTree = SOURCE_ROOT; };
 		7AEBF58B5C6C4A9C88BB1B1F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -124,6 +128,7 @@
 			children = (
 				54181F5316B03F660076ACA1 /* Supporting Files */,
 				54181F6616B03FE00076ACA1 /* EvalJSSpec.m */,
+				546289BE16B6BE08000A174E /* test.js */,
 			);
 			path = Spec;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				54181F8316B0462C0076ACA1 /* AppDelegate.m */,
 				54181F8416B0462C0076ACA1 /* Classes */,
 				54181F9716B0463F0076ACA1 /* Support */,
+				546289C216B6C025000A174E /* default.js */,
 			);
 			path = EvalJS;
 			sourceTree = "<group>";
@@ -249,6 +255,7 @@
 				54181F9216B0462C0076ACA1 /* Default.png in Resources */,
 				54181F9316B0462C0076ACA1 /* Default@2x.png in Resources */,
 				54181F9416B0462C0076ACA1 /* InfoPlist.strings in Resources */,
+				546289C316B6C025000A174E /* default.js in Resources */,
 				54181F9516B0462C0076ACA1 /* EvalJS-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54181F5716B03F660076ACA1 /* InfoPlist.strings in Resources */,
+				546289C116B6BFD3000A174E /* test.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

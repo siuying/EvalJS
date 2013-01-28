@@ -89,6 +89,27 @@ JSValueRef EvalJSBlockCallBack(JSContextRef ctx,
     return JSValueToJSONObject(context, val);
 }
 
+-(id) loadScript:(NSString *)filename {
+    return [self loadScript:filename error:nil];
+}
+
+-(id) loadScript:(NSString *)filename error:(NSError**) error {
+    NSBundle* bundle = [NSBundle bundleForClass:[self class]];
+    NSLog(@"bundle resource path: %@", [bundle resourcePath]);
+
+    NSString* fullPath = [bundle pathForResource:filename ofType:@"js"];
+    NSString* script = [NSString stringWithContentsOfFile:fullPath
+                                                 encoding:NSUTF8StringEncoding
+                                                    error:error];
+    if(!script) {
+        NSLog(@"script not loaded, full path: %@", fullPath);
+        return nil;
+    }
+    
+    return [self eval:script
+                error:error];
+}
+
 -(BOOL) createFunction:(NSString*)functionName callback:(EvalJSBlock)callback {
     return [self createFunction:functionName callback:callback error:nil];
 }
